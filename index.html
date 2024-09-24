@@ -17,10 +17,10 @@ Haha, Tobi bist aufn Link gong du Depp, jetzt host an Virus
     document.getElementById('paul-schober-link').addEventListener('click', function(event) {
         event.preventDefault(); // Verhindert das Standardverhalten des Links
         var section = document.getElementById('paul-schober-section');
-        if(section.style.display === 'none') {
-            section.style.display = 'block'; // Versteckt den Lebenslauf
-        } else {
-            section.style.display = 'none'; // Zeigt den Lebenslauf an, wenn erneut geklickt wird
+        var iframe = document.getElementById('bewerbung-frame');
+        if(section.style.display === 'none' || section.style.display === '') {
+            section.style.display = 'block'; // Zeigt den Abschnitt an
+            iframe.src = 'Lebenslauf_richtig.pdf'; // Lädt die PDF in das iframe
         }
     });
 </script>
