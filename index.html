@@ -17,17 +17,15 @@
 </section>
 <script>
     document.getElementById('paul-schober-link').addEventListener('click', function(event) {
-        event.preventDefault(); // Verhindert das Standardverhalten des Links
+        event.preventDefault();
         var section = document.getElementById('paul-schober-section');
         var iframe = document.getElementById('bewerbung-frame');
-
-        // Lade das PDF, falls noch keine Quelle gesetzt ist
-        if (iframe.getAttribute('src') === null || iframe.getAttribute('src') === "") {
-            iframe.setAttribute('src', 'Lebenslauf_richtig.pdf'); // Lade die PDF-Datei hier
+        
+        if (iframe.getAttribute('src') === null || iframe.getAttribute('src') === '') {
+            iframe.src = 'Lebenslauf_richtig.pdf';  // Passe hier den genauen Dateipfad an!
         }
         
-        // Zeige die PDF-Sektion an, wenn sie noch nicht sichtbar ist
-        section.style.display = 'block';
+        section.style.display = 'block';  // Zeige die Sektion an
     });
 </script>
 <body>
