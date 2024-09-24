@@ -8,10 +8,22 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Fanshop</a></li>
-            <li><a href="#">Paul Schober</a></li> <!-- Neuer Menüpunkt -->
+            <li><a href="#" id="paul-schober-link">Paul Schober</a></li> <!-- Neuer Menüpunkt -->
         </ul>
     </nav>
 </header>
+
+<section id="paul-schober-section" style="display:none; text-align: center; margin-top: 20px;">
+    <p id="paul-schober-text" style="font-size: 30px; font-family: 'Comic Sans MS', cursive, sans-serif;">
+        Verarscht
+    </p>
+</section>
+    <script>
+    document.getElementById('paul-schober-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Verhindert das Standardverhalten des Links
+        document.getElementById('paul-schober-section').style.display = 'block'; // Zeigt den Text an
+    });
+</script>
 <body>
  <section class="resume-section">
     <h2>Mein Lebenslauf</h2>
