@@ -21,9 +21,15 @@
         event.preventDefault(); // Verhindert das Standardverhalten des Links
         var section = document.getElementById('paul-schober-section');
         var iframe = document.getElementById('bewerbung-frame');
-        if(section.style.display === 'none' || section.style.display === '') {
+
+        // Überprüfe, ob das iframe bereits einen src-Wert hat, bevor es angezeigt wird
+        if (!iframe.src || iframe.src === "") {
+            iframe.src = 'Lebenslauf_richtig.pdf'; // Lade die PDF-Datei hier
+        }
+        
+        // Schalte die Sichtbarkeit des Abschnitts um
+        if (section.style.display === 'none' || section.style.display === '') {
             section.style.display = 'block'; // Zeigt den Abschnitt an
-            iframe.src = 'Lebenslauf_richtig.pdf'; // Lädt die PDF in das iframe
         }
     });
 </script>
