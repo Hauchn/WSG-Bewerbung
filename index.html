@@ -5,66 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Schober</title>
     <style>
-        header {
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
             display: flex;
             align-items: center;
             padding: 10px;
+            background-color: white;
         }
 
         .logo {
-            width: 100px;
+            width: 120px; /* Größe des Logos anpassen */
             margin-right: 20px;
         }
 
-        .green-bar {
-            background-color: green;
-            height: 50px;
+        .nav {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Grüne Leiste über die gesamte Breite */
+            gap: 30px; /* Abstand zwischen den Links */
         }
 
-        .name-link {
-            color: white;
-            font-size: 20px;
+        .nav a {
             text-decoration: none;
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
-        .name-link:hover {
+        .nav a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <img src="wsg-logo.png" alt="WSG Tirol Logo" class="logo"> <!-- Pfad zum Logo anpassen -->
+        <nav class="nav">
+            <a href="#" id="paul-schober-link">Paul Schober</a> <!-- Link zur Bewerbung -->
+            <a href="#">Teams</a>
+            <a href="#">Nachwuchs</a>
+            <a href="#">Verein</a>
+            <a href="#">Business</a>
+            <a href="#">Tickets</a>
+            <a href="#">Fanshop</a>
+        </nav>
+    </header>
 
-<header>
-    <img src="wsg-logo.png" alt="WSG Tirol Logo" class="logo">
-    <div class="green-bar">
-        <a href="#" id="paul-schober-link" class="name-link">Paul Schober</a>
-    </div>
-</header>
+    <section id="paul-schober-section" style="display:none;">
+        <iframe id="bewerbung-frame" width="100%" height="600px" style="border: none;"></iframe>
+    </section>
 
-<section id="paul-schober-section" style="display:none;">
-    <iframe id="bewerbung-frame" width="100%" height="600px" style="border: none;"></iframe>
-</section>
+    <script>
+        document.getElementById('paul-schober-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            var section = document.getElementById('paul-schober-section');
+            var iframe = document.getElementById('bewerbung-frame');
 
-<script>
-    document.getElementById('paul-schober-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        var section = document.getElementById('paul-schober-section');
-        var iframe = document.getElementById('bewerbung-frame');
-
-        if (section.style.display === 'none' || section.style.display === '') {
-            section.style.display = 'block';
-            if (!iframe.src) {
-                iframe.src = 'Lebenslauf_richtig.pdf';  // Stelle sicher, dass der Pfad korrekt ist
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+                if (!iframe.src) {
+                    iframe.src = 'Lebenslauf_richtig.pdf';  // Setze den korrekten Pfad zur PDF
+                }
+            } else {
+                section.style.display = 'none';
             }
-        } else {
-            section.style.display = 'none';
-        }
-    });
-</script>
-
+        });
+    </script>
 </body>
 </html>
