@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    justify-content: center; /* Zentriert die Menüpunkte */
+    justify-content: center;
     align-items: center;
     padding: 10px;
     background-color: white;
@@ -11,7 +11,7 @@
 
 .logo {
     position: absolute;
-    left: 20px; /* Logo bleibt links */
+    left: 60px; /* Nähert das Logo "Paul Schober" um 4 cm (40px) an */
     width: 120px;
 }
 
@@ -19,13 +19,14 @@
     display: flex;
     justify-content: center;
     gap: 30px; /* Abstand zwischen den Links */
+    margin-left: 40px; /* Schiebt alle Menüpunkte 2 cm (20px) weiter nach rechts */
 }
 
 .nav a {
     text-decoration: none;
     color: green;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: bold
     text-transform: uppercase;
 }
 
