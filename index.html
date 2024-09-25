@@ -37,7 +37,7 @@
             text-decoration: none;
             color: green;
             font-size: 18px;
-            font-weight: bold; /* Semikolon hinzugefügt */
+            font-weight: bold;
             text-transform: uppercase;
         }
 
@@ -45,18 +45,42 @@
             text-decoration: underline;
         }
 
-        .image-container {
+        .hero-section {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: auto; /* Automatische Höhe */
-            margin-top: 40px; /* Erhöht den Abstand nach unten */
+            background-color: #4caf50; /* Grüne Farbe */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .text-content {
+            color: white;
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .text-content p {
+            font-size: 18px;
+        }
+
+        .weiterlesen-button {
+            padding: 10px 20px;
+            background-color: white;
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
         }
 
         .image-container img {
-            max-width: 80%; /* Verkleinert das Bild auf 80% der verfügbaren Breite */
+            max-width: 50%;
             height: auto;
-            border-radius: 10px; /* Optional: Leichte Abrundung der Ecken */
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -73,7 +97,9 @@
             <a href="#">Fanshop</a>
         </nav>
     </header>
- <div class="hero-section">
+
+    <!-- Hero-Section -->
+    <div class="hero-section">
         <div class="image-container">
             <img src="wsg-spiel.png" alt="WSG Spiel" />
         </div>
@@ -83,11 +109,6 @@
             <p>Unsere Mannschaft knüpfte dem FC Red Bull Salzburg vor 3.650 Zuschauer:innen mit einer ansprechenden Leistung einen Punkt ab.</p>
             <a href="#" class="weiterlesen-button">Weiterlesen</a>
         </div>
-    </div>
-
-    <!-- Bild in der Mitte -->
-    <div class="image-container">
-        <img src="wsg-spiel.png" alt="WSG Spiel" />
     </div>
 
     <section id="paul-schober-section" style="display:none;">
@@ -111,3 +132,4 @@
         });
     </script>
 </body>
+</html>
