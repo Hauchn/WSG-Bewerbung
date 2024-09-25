@@ -33,3 +33,15 @@
 .nav a:hover {
     text-decoration: underline;
 }
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Höhe des Bildbereichs */
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
