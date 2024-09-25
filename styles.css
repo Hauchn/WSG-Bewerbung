@@ -8,3 +8,20 @@ header {
     width: 100px; /* Die Größe des Logos anpassen */
     margin-right: 20px;
 }
+.green-bar {
+    background-color: green;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-link {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.name-link:hover {
+    text-decoration: underline;
+}
