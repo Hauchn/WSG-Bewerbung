@@ -6,46 +6,34 @@
     background-color: white;
     position: relative;
     width: 100%;
-    margin-top: 20px; /* Verschiebt den gesamten Header 2 cm nach unten */
+    margin-top: 20px;
 }
 
 .logo {
     position: absolute;
-    left: 60px; /* Nähert das Logo "Paul Schober" um 4 cm (40px) an */
+    left: 60px;
     width: 120px;
 }
 
 .nav {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Abstand zwischen den Links */
-    margin-left: 40px; /* Schiebt alle Menüpunkte 2 cm (20px) weiter nach rechts */
+    gap: 30px;
+    margin-left: 40px;
 }
 
 .nav a {
     text-decoration: none;
     color: green;
     font-size: 18px;
-    font-weight: bold; /* Semikolon hinzugefügt */
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .nav a:hover {
     text-decoration: underline;
 }
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto; /* Automatische Höhe */
-    margin-top: 40px; /* Erhöht den Abstand nach unten */
-}
 
-.image-container img {
-    max-width: 80%; /* Verkleinert das Bild auf 80% der verfügbaren Breite */
-    height: auto;
-    border-radius: 10px; /* Optional: Leichte Abrundung der Ecken */
-}
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -77,6 +65,14 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 40px;
 }
 
 .image-container img {
