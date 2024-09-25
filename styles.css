@@ -1,21 +1,23 @@
 .header {
     display: flex;
-    justify-content: space-between; /* Verteilt Logo und Menü */
+    justify-content: center; /* Zentriere den gesamten Inhalt */
     align-items: center;
     padding: 10px;
     background-color: white;
-    width: 100%; /* Breite der Header-Leiste */
+    width: 100%;
+    position: relative;
 }
 
 .header .logo {
+    position: absolute;
+    left: 0; /* Platziere das Logo links */
+    margin-left: 20px;
     width: 120px;
-    margin-left: 20px; /* Abstand für das Logo */
 }
 
 .nav {
-    flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
     display: flex;
-    justify-content: center; /* Zentriert die Menüpunkte */
+    justify-content: center;
     gap: 30px;
 }
 
