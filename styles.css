@@ -41,9 +41,11 @@
     background-color: #4caf50;
     padding: 50px;
     border-radius: 0;
-    width: 100%;
-    margin-top: 200px; /* Bild 20 cm (200px) weiter nach unten verschieben */
+    width: 100%; 
+    max-width: 1400px; /* Setze eine maximale Breite */
+    margin: 200px auto; /* Zentriert die Sektion und verschiebt sie nach unten */
 }
+
 
 .text-content {
     color: white;
