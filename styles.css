@@ -37,11 +37,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px; /* Höhe des Bildbereichs */
-    margin-top: 20px;
+    height: auto; /* Automatische Höhe */
+    margin-top: 40px; /* Erhöht den Abstand nach unten */
 }
 
 .image-container img {
-    max-width: 100%;
+    max-width: 80%; /* Verkleinert das Bild auf 80% der verfügbaren Breite */
     height: auto;
+    border-radius: 10px; /* Optional: Leichte Abrundung der Ecken */
 }
