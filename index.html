@@ -1,42 +1,27 @@
 <!DOCTYPE html>
 <html lang="de">
 <header>
-    <div class="logo">
-        <img src="wsg-logo.png" alt="WSG Tirol Logo">
+    <div class="green-bar">
+        <a href="#" id="paul-schober-link" class="name-link">Paul Schober</a>
     </div>
-    <nav>
-        <ul>
-            <li><a href="#" id="paul-schober-link">Paul Schober</a></li> <!-- Neuer Menüpunkt -->
-        </ul>
-    </nav>
 </header>
 
 <section id="paul-schober-section" style="display:none;">
-    <!-- Der Bereich für die PDF wird hier dynamisch hinzugefügt und entfernt -->
+    <iframe id="bewerbung-frame" width="100%" height="600px" style="border: none;"></iframe>
 </section>
 <script>
     document.getElementById('paul-schober-link').addEventListener('click', function(event) {
         event.preventDefault();
         var section = document.getElementById('paul-schober-section');
-        
-        // Überprüfen, ob der Bereich angezeigt oder versteckt ist
+        var iframe = document.getElementById('bewerbung-frame');
+
         if (section.style.display === 'none' || section.style.display === '') {
-            section.style.display = 'block'; // Zeige die Sektion mit der PDF an
-            
-            // Erstelle und füge das iframe nur dann hinzu, wenn es noch nicht existiert
-            if (!document.getElementById('bewerbung-frame')) {
-                var iframe = document.createElement('iframe');
-                iframe.id = 'bewerbung-frame';
-                iframe.src = 'Lebenslauf_richtig.pdf'; // Stelle sicher, dass der Pfad korrekt ist
-                iframe.width = '100%';
-                iframe.height = '600px';
-                iframe.style.border = 'none';
-                section.appendChild(iframe); // Füge das iframe zur Sektion hinzu
+            section.style.display = 'block';
+            if (!iframe.src) {
+                iframe.src = 'Lebenslauf_richtig.pdf';  // Stelle sicher, dass der Pfad korrekt ist
             }
         } else {
-            // Verstecke die Sektion und entferne das iframe
             section.style.display = 'none';
-            section.innerHTML = ''; // Entferne das iframe aus der Sektion
         }
     });
 </script>
