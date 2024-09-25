@@ -12,25 +12,31 @@
 </header>
 
 <section id="paul-schober-section" style="display:none;">
-    <!-- Kein iframe hier -->
+    <!-- Kein iframe hier, es wird dynamisch hinzugefügt -->
 </section>
 <script>
     document.getElementById('paul-schober-link').addEventListener('click', function(event) {
         event.preventDefault();
         var section = document.getElementById('paul-schober-section');
+        var iframe = document.getElementById('bewerbung-frame');
         
-        // Überprüfen, ob das iframe bereits existiert
-        if (!document.getElementById('bewerbung-frame')) {
-            var iframe = document.createElement('iframe');
+        // Überprüfe, ob das iframe bereits existiert
+        if (!iframe) {
+            iframe = document.createElement('iframe');
             iframe.id = 'bewerbung-frame';
-            iframe.src = 'Lebenslauf_richtig.pdf';  // Der korrekte Pfad zur PDF
+            iframe.src = 'Lebenslauf_richtig.pdf';  // Setze den korrekten Pfad zur PDF
             iframe.width = '100%';
             iframe.height = '600px';
             iframe.style.border = 'none';
             section.appendChild(iframe); // Füge das iframe zur Seite hinzu
         }
-        
-        section.style.display = 'block'; // Zeige die Sektion mit dem iframe an
+
+        // Umschalten der Anzeige: Anzeigen oder Verstecken
+        if (section.style.display === 'none' || section.style.display === '') {
+            section.style.display = 'block'; // Zeige die Sektion mit dem iframe an
+        } else {
+            section.style.display = 'none';  // Verstecke die Sektion und das iframe
+        }
     });
 </script>
 <body>
