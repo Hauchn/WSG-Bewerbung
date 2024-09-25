@@ -42,10 +42,9 @@
     padding: 50px;
     border-radius: 0;
     width: 100%; 
-    max-width: 1400px; /* Setze eine maximale Breite */
+    max-width: 1400px;
     margin: 200px auto; /* Zentriert die Sektion und verschiebt sie nach unten */
 }
-
 
 .text-content {
     color: white;
@@ -76,10 +75,4 @@
     max-width: 100%;
     height: auto;
     border-radius: 0;
-}
-
-.image-container img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 10px;
 }
